@@ -1,0 +1,53 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.music_player {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 263px;
+    height: auto;
+    padding: 12px 16px 12px 16px;
+    border-radius: 56px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px #23181514;
+    font-family: 'Rubik', "Roboto", "system";
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.player_control {
+    display: flex;
+    flex-direction: row;
+    margin-right: 12px;
+}
+
+#btn_play {
+    background-color: transparent;
+    border: 0px;
+    color: #0373F9;
+    margin-right: 8px;
+}
+
+.timestamp {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+#progress_bar{
+    flex: auto;
+    background-color: #94C4FE;
+    border-radius: 56px;
+    width: auto;
+    height: 8px;
+}
+
+#progress_current {
+    width: 0px;
+    height: 8px;
+    background-color: #0373F9;
+    border-radius: 56px;
+}
