@@ -1,3 +1,5 @@
+console.log('see this mean you are in JS file')
+
 var BasicAudioPlayer = (src,playerId) => {
     var audioplayer = document.createElement('div')
     audioplayer.classList.add('music_player')
