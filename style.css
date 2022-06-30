@@ -1,8 +1,3 @@
-body {
-    margin: 0px;
-    padding: 24px 48px;
-}
-
 .music_player {
     display: flex;
     flex-direction: row;
