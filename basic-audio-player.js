@@ -20,7 +20,7 @@ var BasicAudioPlayer = (src,playerId) => {
     </div>
     <audio src="${src}" id="${playerId}" preload="auto"></audio>
 `
-    document.body.append(audioplayer)
+    document.currentScript.parentElement.append(audioplayer)
 
     const voiceRecord = document.getElementById(playerId)
     const playButton = document.getElementById(`${playerId}_playbutton`)
