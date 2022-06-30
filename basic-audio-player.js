@@ -16,8 +16,8 @@ var BasicAudioPlayer = (src) => {
     <div id="progress_bar">
         <div id="progress_current"></div>
     </div>
-    <audio src="${src}" id="voice_record" preload="auto"></audio>
+    <audio src="${src}" id="voice_record" preload="auto" muted></audio>
 `
     document.body.append(audioplayer)
-    return 
+    return
 }
