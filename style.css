@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    padding: 0px;
+    padding: 24px 48px;
 }
 
 .music_player {
@@ -16,6 +16,7 @@ body {
     font-family: 'Rubik', "Roboto", "system";
     font-size: 16px;
     line-height: 26px;
+    margin-bottom: 24px;
 }
 
 .player_control {
@@ -24,7 +25,7 @@ body {
     margin-right: 12px;
 }
 
-#btn_play {
+.btn_play {
     background-color: transparent;
     border: 0px;
     color: #0373F9;
@@ -37,7 +38,7 @@ body {
     flex-direction: row;
 }
 
-#progress_bar{
+.progress_bar{
     flex: auto;
     background-color: #94C4FE;
     border-radius: 56px;
@@ -45,7 +46,7 @@ body {
     height: 8px;
 }
 
-#progress_current {
+.progress_current {
     width: 0px;
     height: 8px;
     background-color: #0373F9;
