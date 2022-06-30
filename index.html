@@ -2,82 +2,21 @@
 <html>
     <head>
         <title>Dino Project 實驗室</title>
-        <link href="./style.css" rel="stylesheet">
+        <link href="./dino-audio-player.css" rel="stylesheet">
         <script src="./basic-audio-player.js"></script>
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/NightCK/basic-audio-player@separate-js/style.css" rel="stylesheet"> -->
+        <!-- <script src="https://cdn.jsdelivr.net/gh/NightCK/basic-audio-player@separate-js/basic-audio-player.js"></script> -->
         <script src="https://kit.fontawesome.com/d754082591.js" crossorigin="anonymous"></script>
     </head>
     <body> 
         <h1>Testing</h1>
-        <script>BasicAudioPlayer("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")</script>
-    
-    <script>
-        const musicPlayer = document.getElementById('music_player')
-        const playButton = document.getElementById('btn_play')
-        const voiceRecord = document.querySelector('#voice_record')
-        const progressBar = document.querySelector('#progress_bar')
+        <div>
+            <script>BasicAudioPlayer("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", 'dino1')</script>
+        </div>
 
-        var getAudioLength = () => {
-            voiceRecord.onloadedmetadata = () => {
-                var minute = voiceRecord.duration/60
-                var rminute = Math.floor(minute)
-                var second = Math.floor((minute-rminute)*60)
-                var minutePad = String(rminute).padStart(2,"0")
-                var secondPad = String(second).padStart(2,"0")
-                document.querySelector('#audio_duration').innerHTML = `${minutePad}:${secondPad}`
-                return
-            }
-        }
-
-        var getCurrentTime = () => {
-            voiceRecord.ontimeupdate = () => {
-                var minute = voiceRecord.currentTime/60
-                var rminute = Math.floor(minute)
-                var second = Math.floor((minute-rminute)*60)
-                var minutePad = String(rminute).padStart(2,"0")
-                var secondPad = String(second).padStart(2,"0")
-                var playedPercentage = (voiceRecord.currentTime/voiceRecord.duration)*100
-
-                document.querySelector('#current_time').innerHTML = `${minutePad}:${secondPad}`
-                document.querySelector('#progress_current').style.width = `${playedPercentage}%`  
-            }
-        }
-
-        var playSong = () => {
-            playButton.querySelector('.fa-regular').classList.remove('fa-circle-play')
-            playButton.querySelector('.fa-regular').classList.add('fa-circle-pause')
-            voiceRecord.play()
-            return
-        }
-
-        var pauseSong = () => {
-            playButton.querySelector('.fa-regular').classList.remove('fa-circle-pause')
-            playButton.querySelector('.fa-regular').classList.add('fa-circle-play')
-            voiceRecord.pause()
-            return
-        }
-
-        getAudioLength()
-        getCurrentTime()
-
-        playButton.addEventListener('click',function(){
-            const isPlaying = playButton.querySelector('.fa-regular').classList.contains('fa-circle-pause')
-
-            if(isPlaying) {
-                pauseSong()
-            } else {
-                playSong()
-            }
-        })
-
-        progressBar.addEventListener('click',clickOnProgress = (e) => {
-            var clickPosition = e.offsetX / progressBar.clientWidth
-            voiceRecord.currentTime = clickPosition*voiceRecord.duration
-            return
-        })
-
-        voiceRecord.onended = () => {
-            pauseSong()
-        }
-    </script>
+        <div>
+            <script>BasicAudioPlayer("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3", 'dino2')</script>
+        </div>
     </body>
 </html>
